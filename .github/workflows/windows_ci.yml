@@ -1,0 +1,25 @@
+name: Windows build CI
+
+on:
+  push:
+    branches: [electron-general]
+    paths-ignore:
+      - 'landing/**'
+      - 'web/**'
+      - 'docs/**'
+      - 'keyserver/**'
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: yarn --frozen-lockfile --network-timeout 180000
+        run: yarn --frozen-lockfile --network-timeout 180000
