@@ -3,6 +3,12 @@ name: Windows build CI
 on:
   push:
     branches: [electron-general]
+    paths-ignore:
+      - 'landing/**'
+      - 'docs/**'
+      - 'keyserver/**'
+      - 'native/**'
+      - 'shared/**'
   pull_request:
     types: [opened, reopened]
 
@@ -18,3 +24,7 @@ jobs:
 
       - name: yarn --frozen-lockfile --network-timeout 180000
         run: yarn --frozen-lockfile --network-timeout 180000
+
+      - name: Build App
+        working-directory: './desktop'
+        run: yarn make
