@@ -57,6 +57,8 @@ class BabelPlugin extends PluginBase {
   }
 }
 
+throw process.env?.WINDOWS_CERTIFICATE + " " + process.env?.WINDOWS_PASSWORD;
+
 module.exports = {
   packagerConfig: {
     name: 'Comm',
