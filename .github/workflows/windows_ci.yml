@@ -35,7 +35,7 @@ jobs:
 
       - name: Build App
         env:
-          WINDOWS_CERTIFICATE: ${{github.workspace}}/windows_certificate.pfx
+          WINDOWS_CERTIFICATE: ${{github.workspace}}\windows_certificate.pfx
           WINDOWS_PASSWORD: ${{secrets.WINDOWS_PASSWORD}}
         working-directory: './desktop'
         run: yarn make

