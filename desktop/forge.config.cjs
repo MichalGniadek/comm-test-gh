@@ -78,12 +78,12 @@ module.exports = {
       config: {
         icon: 'icons/icon.icns',
         background: 'icons/dmg_background.png',
-        additionalDMGOptions: {
-          'code-sign': {
-            'signing-identity': 'Developer ID Application',
-            'identifier': 'app.comm.macos',
-          },
-        },
+        // additionalDMGOptions: {
+        //   'code-sign': {
+        //     'signing-identity': 'Developer ID Application',
+        //     'identifier': 'app.comm.macos',
+        //   },
+        // },
         contents: opts => [
           { x: 340, y: 100, type: 'link', path: '/Applications' },
           { x: 100, y: 100, type: 'file', path: opts.appPath },
@@ -101,8 +101,8 @@ module.exports = {
         iconUrl: 'https://comm-external.s3.amazonaws.com/icon.ico',
         setupIcon: 'icons/icon.ico',
         loadingGif: 'icons/win_installer.gif',
-        certificateFile: process.env?.WINDOWS_CERTIFICATE,
-        certificatePassword: process.env?.WINDOWS_PASSWORD,
+        // certificateFile: process.env?.WINDOWS_CERTIFICATE,
+        // certificatePassword: process.env?.WINDOWS_PASSWORD,
       },
     },
   ],

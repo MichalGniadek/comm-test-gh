@@ -1,4 +1,4 @@
-name: iOS Build CI
+name: macOS Build CI
 
 on:
   push:
@@ -14,7 +14,7 @@ on:
 
 jobs:
   build:
-    name: Build and archive iOS app
+    name: Build macOS app
     runs-on: macos-12
 
     steps:
