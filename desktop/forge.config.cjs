@@ -57,22 +57,19 @@ class BabelPlugin extends PluginBase {
   }
 }
 
-const content = fs.readFileSync(process.env?.WINDOWS_CERTIFICATE, 'utf8')
-throw new Error(content + " | " + process.env?.WINDOWS_CERTIFICATE + " | " + process.env?.WINDOWS_PASSWORD);
-
 module.exports = {
   packagerConfig: {
     name: 'Comm',
     icon: 'icons/icon',
     ignore: ['src', '.*config\\.cjs', '\\.eslintrc\\.json'],
     appBundleId: 'app.comm.macos',
-    osxSign: { identity: 'Developer ID Application' },
-    osxNotarize: {
-      tool: 'notarytool',
-      appleId: process.env?.APPLE_USER_NAME,
-      appleIdPassword: process.env?.APPLE_APP_SPECIFIC_PASSWORD,
-      teamId: process.env?.TEAM_ID,
-    },
+    // osxSign: { identity: 'Developer ID Application' },
+    // osxNotarize: {
+    //   tool: 'notarytool',
+    //   appleId: process.env?.APPLE_USER_NAME,
+    //   appleIdPassword: process.env?.APPLE_APP_SPECIFIC_PASSWORD,
+    //   teamId: process.env?.TEAM_ID,
+    // },
   },
   makers: [
     {

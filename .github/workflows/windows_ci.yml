@@ -30,7 +30,7 @@ jobs:
           WINDOWS_CERTIFICATE_B64: ${{secrets.WINDOWS_CERTIFICATE_B64}}
         run: echo "$env:WINDOWS_CERTIFICATE_B64" > WINDOWS_CERTIFICATE_B64.b64
 
-      - name: Decode Windows certificate to file
+      - name: Decode Windows certificate
         run: certutil -decode WINDOWS_CERTIFICATE_B64.b64 windows_certificate.pfx
 
       - name: Build App
