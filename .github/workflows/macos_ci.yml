@@ -2,14 +2,14 @@ name: macOS Build CI
 
 on:
   workflow_call:
-  push:
-    branches: [master]
-    paths-ignore:
-      - 'landing/**'
-      - 'docs/**'
-      - 'keyserver/**'
-      - 'native/**'
-      - 'shared/**'
+  # push:
+  #   branches: [master]
+  #   paths-ignore:
+  #     - 'landing/**'
+  #     - 'docs/**'
+  #     - 'keyserver/**'
+  #     - 'native/**'
+  #     - 'shared/**'
 
 jobs:
   build:
