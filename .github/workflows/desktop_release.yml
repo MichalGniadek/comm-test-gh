@@ -24,8 +24,6 @@ jobs:
         id: release
         uses: softprops/action-gh-release@v1
         with:
-          name: ${{ github.ref_name }}
-          draft: true
           fail_on_unmatched_files: true
           files: |
             windows-artifacts/**/*

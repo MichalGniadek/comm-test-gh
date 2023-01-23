@@ -1,6 +1,7 @@
 name: Windows build CI
 
 on:
+  workflow_call:
   push:
     branches: [master]
     paths-ignore:
