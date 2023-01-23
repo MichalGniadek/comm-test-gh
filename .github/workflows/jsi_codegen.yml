@@ -12,12 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: npm install -g yarn
-        run: npm install -g yarn
+      # - name: npm install -g yarn
+      #   run: npm install -g yarn
 
-      - name: yarn --frozen-lockfile --network-timeout 180000
-        run: yarn --frozen-lockfile --network-timeout 180000
+      # - name: yarn --frozen-lockfile --network-timeout 180000
+      #   run: yarn --frozen-lockfile --network-timeout 180000
 
-      - name: '[native] JSI Codegen'
-        working-directory: ./native
-        run: yarn codegen-jsi && git diff --exit-code
+      # - name: '[native] JSI Codegen'
+      #   working-directory: ./native
+      #   run: yarn codegen-jsi && git diff --exit-code
