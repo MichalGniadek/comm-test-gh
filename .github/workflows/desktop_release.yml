@@ -24,6 +24,7 @@ jobs:
         id: release
         uses: softprops/action-gh-release@v1
         with:
+          prerelease: true
           fail_on_unmatched_files: true
           files: |
             windows-artifacts/**/*
