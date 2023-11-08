@@ -36,4 +36,4 @@ jobs:
           APPLE_APP_SPECIFIC_PASSWORD: ${{secrets.APPLE_APP_SPECIFIC_PASSWORD}}
           TEAM_ID: ${{secrets.TEAM_ID}}
         working-directory: './desktop'
-        run: yarn make --arch universal
+        run: yarn make-dev
